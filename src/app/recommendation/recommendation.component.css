@@ -1,0 +1,46 @@
+
+
+
+
+.card{
+    height: 250px;
+    width: 40%;
+    border-radius: 4%;
+    margin-left: 5%;
+    position: relative;
+}
+h2,h3{
+    text-shadow: 1px 1px blue;
+
+}
+
+.btn btn-primary{
+    position: fixed;
+    size: 2px;
+}
+
+.test{
+    /* display: inline-block; */
+  /* width: 100%; */
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.8rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.8rem;
+  width:max-content;
+  font-weight: 800;
+
+}
+
+.clss{
+    display: inline-block
+;}
+
+
+.pos{
+    display: flex;
+    justify-content: space-around;
+}

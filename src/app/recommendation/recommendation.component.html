@@ -1,0 +1,51 @@
+<div class="pos">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-auto">
+          <form [formGroup]="recoForm">
+            <mat-form-field aprrearence="fill">
+              <h2>Recommendations</h2>
+              <h3>Search</h3>
+              <input
+                matInput
+                [matAutocomplete]="auto"
+                (keydown.enter)="onselect($event)"
+                formControlName="inputField"
+                style="border: 20%"
+              />
+              <mat-autocomplete
+                #auto="matAutocomplete"
+                [displayWith]="displayFn"
+              >
+                <mat-option
+                  *ngFor="
+                    let r of Doctors
+                      "
+                  [value]="r"
+                >
+                  {{ r.Name }}</mat-option
+                >
+              </mat-autocomplete>
+            </mat-form-field>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div class="col-a">
+          <div class="row">
+            <div class="col-sm-2" *ngFor="let d of Doctor">
+              <div class="btn btn-primar" class="test">
+                <small>
+                  {{ d.Name
+                  }}<i (click)="removeselection(d.Id)" class="bi bi-x-lg"></i>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

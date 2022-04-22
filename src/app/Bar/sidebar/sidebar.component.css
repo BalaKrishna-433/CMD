@@ -1,0 +1,33 @@
+div.side-navbar{
+    width:12%;
+    /* display: block;  */
+    /* position: absolute; */
+    height: 920px;
+    background-color:rgb(23, 23, 97);
+    /* padding-left: 15%; */
+
+    margin-right: 20%;
+    /* color:white; */
+}
+a.nav-link{
+    color: white;
+}
+#icon1{
+    /* align-self: right; */
+    padding-left: 15px;
+}
+
+.side-navbar{
+    position: fixed;
+    height:auto;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* background-color: #111; */
+  overflow-x: hidden;
+  /* padding-top: 20px; */
+
+
+}
