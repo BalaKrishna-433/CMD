@@ -3,7 +3,7 @@
 
 
 .card{
-    height: 250px;
+    height: 60%;
     width: 40%;
     border-radius: 4%;
     margin-left: 5%;
@@ -43,4 +43,8 @@ h2,h3{
 .pos{
     display: flex;
     justify-content: space-around;
+}
+
+.col-sm-2{
+    margin-left: 30px;
 }

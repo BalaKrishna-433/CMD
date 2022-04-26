@@ -1,18 +1,20 @@
+
 <div class="pos">
+
   <div class="card">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-auto">
+    <div class="card-body wrap d-md-flex">
+      <div class="">
+        <div class="">
           <form [formGroup]="recoForm">
             <mat-form-field aprrearence="fill">
               <h2>Recommendations</h2>
               <h3>Search</h3>
-              <input
-                matInput
+              <input (change)="search()" [(ngModel)]="searchText"
+                matInput 
                 [matAutocomplete]="auto"
-                (keydown.enter)="onselect($event)"
+                (keydown.enter)="onselect()" 
                 formControlName="inputField"
-                style="border: 20%"
+                style="border: 20%" 
               />
               <mat-autocomplete
                 #auto="matAutocomplete"
@@ -20,11 +22,11 @@
               >
                 <mat-option
                   *ngFor="
-                    let r of Doctors
+                    let r of FilterDoctor
                       "
                   [value]="r"
                 >
-                  {{ r.Name }}</mat-option
+                  Dr.{{ r.DoctorName }}</mat-option
                 >
               </mat-autocomplete>
             </mat-form-field>
@@ -33,14 +35,15 @@
       </div>
 
       <div>
-        <div class="col-a">
+        <div class="col-sm-2">
           <div class="row">
             <div class="col-sm-2" *ngFor="let d of Doctor">
               <div class="btn btn-primar" class="test">
-                <small>
-                  {{ d.Name
-                  }}<i (click)="removeselection(d.Id)" class="bi bi-x-lg"></i>
+                <small *ngFor="let r of DocName"><span *ngIf="d.DoctorId==r.DoctorId" >
+                 Dr.{{ r.DoctorName 
+                  }}<i (click)="removeselection(d.RecommendationId)" class="bi bi-x-lg"></i></span>
                 </small>
+
               </div>
             </div>
           </div>
